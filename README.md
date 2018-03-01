@@ -98,6 +98,15 @@ Installation from **Git** repository:
     cd ansible-cmdb
     sudo make install
 
+### With Docker
+
+To build:
+
+    docker build -t ansible-cmdb .
+
+To run:
+
+    docker run -v $(pwd)/inventory.ini:/tmp/inventory -v $(pwd)/out:/tmp/out --rm ansible-cmdb -i /tmp/inventory /tmp/out
 
 Usage
 -----
